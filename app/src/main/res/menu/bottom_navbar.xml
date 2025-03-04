@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/available_rooms_btn"
+        android:title="Rooms"
+        android:icon="@drawable/bunk_bed"/>
+
+    <item
+        android:id="@+id/reserved_rooms_btn"
+        android:title="History"
+        android:icon="@drawable/hotel" />
+    <item
+        android:id="@+id/user_btn"
+        android:title="User"
+        android:icon="@drawable/user" />
+
+</menu>

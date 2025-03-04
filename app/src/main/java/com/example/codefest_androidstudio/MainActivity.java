@@ -7,9 +7,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class
 MainActivity extends AppCompatActivity {
+
+    private RecyclerView roomsRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +20,13 @@ MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
+        roomsRecyclerView = findViewById(R.id.rooms_recycler_view);
 
     }
 }
